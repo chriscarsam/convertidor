@@ -1,9 +1,6 @@
 package org.sam.converter_demo.controller;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-
 import javax.swing.JFrame;
 
 import org.sam.converter_demo.model.Logic;
@@ -32,6 +29,10 @@ public class Coordinator {
 
 	public void setLogic(Logic logic) {
 		this.logic = logic;		
+	}
+	
+	public void showWindowMain() {
+		windowMain.setVisible(true);
 	}
 
 	public void showWindow(int window) {

@@ -8,6 +8,7 @@ import org.sam.converter_demo.controller.Coordinator;
 
 public class Logic {
 	
+	@SuppressWarnings("unused")
 	private Coordinator myCoordinator;
 	private double equivalence;
 	private NumberFormat formatter = new DecimalFormat("#0.0000");
