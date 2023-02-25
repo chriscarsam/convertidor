@@ -1,6 +1,6 @@
 package org.sam.converter_demo.model;
 
-public enum Country {	
+public enum Data {	
 	SA("Arabia Saudita", "Riyal", 0.26610),
 	DZ("Argelia", "Dinar", 0.00730),
 	AR("Argentina", "Peso", 0.00560),
@@ -73,7 +73,7 @@ public enum Country {
 	private String coin;
 	private Double equivalence;
 	
-	private Country(String country, String coin, Double equivalence) {
+	private Data(String country, String coin, Double equivalence) {
 		this.country = country;
 		this.coin = coin;
 		this.equivalence = equivalence;		

@@ -15,8 +15,7 @@ public class Main {
 	   Logic logic = new Logic();
 		
 	   WindowMain windowMain = new WindowMain();		 		  
-	   WindowCoin windowCoin = new WindowCoin();	
-		  
+	   WindowCoin windowCoin = new WindowCoin();		  
 	   WindowGrade windowGrade = new WindowGrade();	  
 	   
 	   windowMain.setCoordinator(myCoordinator);

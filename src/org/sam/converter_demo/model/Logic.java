@@ -12,6 +12,10 @@ public class Logic {
 	private Coordinator myCoordinator;
 	private double equivalence;
 	private NumberFormat formatter = new DecimalFormat("#0.0000");
+	
+	public void setCoordinator(Coordinator myCoordinator) {
+		this.myCoordinator = myCoordinator;
+	}
 
 	public double convertCoinDolar(double valor, double equivalence) {
 		return valor * equivalence;
@@ -24,15 +28,11 @@ public class Logic {
 	public HashMap<Double, String> getListCountries(){
 		HashMap<Double, String> listaPaises= new HashMap<>();
 				
-		for(Country c: Country.values()) {
+		for(Data c: Data.values()) {
 			listaPaises.put(c.getEquivalence(), c.getNameCoin() + " de " + c.getCountry());
 		}
 		
 		return listaPaises;
-	}
-	
-	public void setCoordinator(Coordinator myCoordinator) {
-		this.myCoordinator = myCoordinator;
 	}
 	
 	public String converGrade(double valor, int opt) {
