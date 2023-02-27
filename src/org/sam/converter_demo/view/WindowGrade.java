@@ -86,18 +86,18 @@ public class WindowGrade extends JFrame implements ActionListener{
 		cmbCombo.setBounds(300, 115, 230, 40);
 		cmbCombo.setBackground(new Color(255, 255, 255));
 		cmbCombo.setFont(myFont3);				
-		cmbCombo.addItem("Celsius To Fahrenheit");
-		cmbCombo.addItem("Celsius To Kelvin");
-		cmbCombo.addItem("Celsius To Rankine");		
-		cmbCombo.addItem("Fahrenheit To Celsius");
-		cmbCombo.addItem("Fahrenheit To Kelvin");
-		cmbCombo.addItem("Fahrenheit To Rankine");
-		cmbCombo.addItem("Kelvin To Celsius");
-		cmbCombo.addItem("Kelvin To Fahrenheit");
-		cmbCombo.addItem("FKelvin To Rankine");
-		cmbCombo.addItem("Rankine To Celsius");
-		cmbCombo.addItem("Rankine To Fahrenheit");
-		cmbCombo.addItem("Rankine To Kelvin");
+		cmbCombo.addItem("     Celsius To Fahrenheit");
+		cmbCombo.addItem("     Celsius To Kelvin");
+		cmbCombo.addItem("     Celsius To Rankine");		
+		cmbCombo.addItem("     Fahrenheit To Celsius");
+		cmbCombo.addItem("     Fahrenheit To Kelvin");
+		cmbCombo.addItem("     Fahrenheit To Rankine");
+		cmbCombo.addItem("     Kelvin To Celsius");
+		cmbCombo.addItem("     Kelvin To Fahrenheit");
+		cmbCombo.addItem("     FKelvin To Rankine");
+		cmbCombo.addItem("     Rankine To Celsius");
+		cmbCombo.addItem("     Rankine To Fahrenheit");
+		cmbCombo.addItem("     Rankine To Kelvin");
 		cmbCombo.addActionListener(this);
 		
 			
@@ -158,6 +158,7 @@ public class WindowGrade extends JFrame implements ActionListener{
 			}catch (NumberFormatException exexception) {				
 				System.out.println(exexception.getMessage());				
 				exexception.printStackTrace();
+				txtCampo.setText("1");
 			}			
 						
 			if(!txtCampo.getText().isEmpty()) {	

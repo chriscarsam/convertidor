@@ -31,9 +31,7 @@ public class WindowCoin extends JFrame implements ActionListener, FocusListener{
 	
 	private JLabel lblTitulo;
 	private JLabel lblValor;
-	private JLabel lblA;
-	private JTextField txtCampo;
-	private JLabel lblcampoRes;
+	private JTextField txtCampo;	
 	private JLabel lblDe;
 	private JLabel lblResultado1;
 	private JLabel lblResultado2;
@@ -49,7 +47,7 @@ public class WindowCoin extends JFrame implements ActionListener, FocusListener{
 	NumberFormat formatter = new DecimalFormat("#0.0000");   
 	
 	public WindowCoin() {
-		setSize(800, 400);		
+		setSize(770, 400);		
 		setLocationRelativeTo(null);
 		startComponents();
 		setTitle("MONEDAS");
@@ -61,7 +59,7 @@ public class WindowCoin extends JFrame implements ActionListener, FocusListener{
 		
 		jpPanel = new JPanel();
 		jpPanel.setBackground(Color.white);
-		jpPanel.setBounds(0, 0, 800, 400);
+		jpPanel.setBounds(0, 0, 770, 400);
 		
 		jsSeparador = new JSeparator();
 		jsSeparador.setForeground(new Color(7, 17, 148));
@@ -86,18 +84,6 @@ public class WindowCoin extends JFrame implements ActionListener, FocusListener{
 		txtCampo.setText("1");
 		txtCampo.addActionListener(this);
 		txtCampo.addFocusListener(this);		
-		
-		lblA = new JLabel("A");
-		lblA.setForeground(new Color(7, 17, 148));
-		lblA.setFont(myFont2);
-		lblA.setBounds(540, 80, 200, 40);
-		
-		Border line3 = new LineBorder(new Color(7, 17, 148));
-		lblcampoRes = new JLabel();
-		lblcampoRes.setBounds(540, 115, 190, 40);
-		lblcampoRes.setText(" Dólares estadounidenses");
-		lblcampoRes.setBorder(line3);
-		lblcampoRes.setFont(myFont3);
 				
 		lblDe = new JLabel("De");
 		lblDe.setForeground(new Color(7, 17, 148));
@@ -105,7 +91,7 @@ public class WindowCoin extends JFrame implements ActionListener, FocusListener{
 		lblDe.setBounds(300, 80, 150, 40);
 		
 		cmbCombo = new JComboBox<String>();
-		cmbCombo.setBounds(290, 115, 230, 40);
+		cmbCombo.setBounds(300, 115, 400, 40);
 		cmbCombo.setBackground(new Color(255, 255, 255));
 		cmbCombo.setFont(myFont3);								
 		cmbCombo.addActionListener(this);
@@ -123,7 +109,7 @@ public class WindowCoin extends JFrame implements ActionListener, FocusListener{
 		Border line2 = new LineBorder(Color.GRAY);
 		btnCancelar = new JButton();
 		btnCancelar.setText("Cancelar");
-		btnCancelar.setBounds(430, 180, 300, 40);
+		btnCancelar.setBounds(400, 180, 300, 40);
 		btnCancelar.setBackground(Color.GRAY);
 		btnCancelar.setForeground(Color.white);
 		btnCancelar.setBorder(line2);	
@@ -145,10 +131,8 @@ public class WindowCoin extends JFrame implements ActionListener, FocusListener{
 		add(lblTitulo);
 		add(jsSeparador);
 		add(txtCampo);
-		add(lblcampoRes);
 		add(lblValor);
-		add(lblDe);
-		add(lblA);
+		add(lblDe);	
 		add(cmbCombo);
 		add(btnCalcular);
 		add(btnCancelar);
@@ -171,6 +155,7 @@ public class WindowCoin extends JFrame implements ActionListener, FocusListener{
 			}catch (NumberFormatException exexception) {				
 				System.out.println(exexception.getMessage());				
 				exexception.printStackTrace();
+				txtCampo.setText("1");
 			}
 			
 			if(!txtCampo.getText().isEmpty()) {	
@@ -224,7 +209,7 @@ public class WindowCoin extends JFrame implements ActionListener, FocusListener{
 			
 			myCoordinator.consultarPaises().forEach((k, v) -> {
 				datos.put(k, v);
-				cmbCombo.addItem(v);
+				cmbCombo.addItem("     " + v + " To Dólar");
 			}); 			
 			
 		}
