@@ -158,12 +158,13 @@ public class WindowGrade extends JFrame implements ActionListener{
 			}catch (NumberFormatException exexception) {				
 				System.out.println(exexception.getMessage());				
 				exexception.printStackTrace();
+				JOptionPane.showInternalMessageDialog(null, "¡Ingresa un valor numérico!");
 				txtCampo.setText("1");
 			}			
 						
 			if(!txtCampo.getText().isEmpty()) {	
 				
-				lblResultado1.setText("°"+cmbCombo.getSelectedItem().toString().substring(0, 1) + " = " + valor );
+				lblResultado1.setText("°"+cmbCombo.getSelectedItem().toString().trim().substring(0, 1) + " = " + valor );
 				lblResultado2.setText("      " + cmbCombo.getSelectedItem());
 				lblResultado3.setText(myCoordinator.convertirGrado(valor, cmbCombo.getSelectedIndex()));
 				

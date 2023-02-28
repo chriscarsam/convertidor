@@ -155,6 +155,7 @@ public class WindowCoin extends JFrame implements ActionListener, FocusListener{
 			}catch (NumberFormatException exexception) {				
 				System.out.println(exexception.getMessage());				
 				exexception.printStackTrace();
+				JOptionPane.showInternalMessageDialog(null, "¡Ingresa un valor numérico!");
 				txtCampo.setText("1");
 			}
 			
