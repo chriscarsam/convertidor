@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 import org.sam.converter_demo.controller.Coordinator;
 
-public class Logic {
+public class Logic implements ILogic{
 	
 	@SuppressWarnings("unused")
 	private Coordinator myCoordinator;
@@ -16,15 +16,18 @@ public class Logic {
 	public void setCoordinator(Coordinator myCoordinator) {
 		this.myCoordinator = myCoordinator;
 	}
-
+	
+	@Override
 	public double convertCoinDolar(double valor, double equivalence) {
 		return valor * equivalence;
 	}
 
+	@Override
 	public double convertDolarCoin(double valor, double equivalence) {
 		return valor / equivalence;
 	}
 
+	@Override
 	public HashMap<Double, String> getListCountries(){
 		HashMap<Double, String> listaPaises= new HashMap<>();
 				
@@ -35,6 +38,7 @@ public class Logic {
 		return listaPaises;
 	}
 	
+	@Override
 	public String converGrade(double valor, int opt) {
 	  String sigla = "";
 		

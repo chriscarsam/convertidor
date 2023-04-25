@@ -1,6 +1,7 @@
 package org.sam.converter_demo;
 
 import org.sam.converter_demo.controller.Coordinator;
+import org.sam.converter_demo.model.ILogic;
 import org.sam.converter_demo.model.Logic;
 import org.sam.converter_demo.view.WindowMain;
 import org.sam.converter_demo.view.WindowGrade;
@@ -12,7 +13,7 @@ public class Main {
 		
 	   Coordinator myCoordinator = new Coordinator();
 	   
-	   Logic logic = new Logic();
+	   ILogic logic = new Logic();
 		
 	   WindowMain windowMain = new WindowMain();		 		  
 	   WindowCoin windowCoin = new WindowCoin();		  
@@ -21,12 +22,12 @@ public class Main {
 	   windowMain.setCoordinator(myCoordinator);
 	   windowCoin.setCoordinator(myCoordinator);
 	   windowGrade.setCoordinator(myCoordinator);
-	   logic.setCoordinator(myCoordinator);
+	   ((Logic) logic).setCoordinator(myCoordinator);
 	   
 	   myCoordinator.setWindowOne(windowMain);
 	   myCoordinator.setWindowTwo(windowCoin);
 	   myCoordinator.setWindowThree(windowGrade);
-	   myCoordinator.setLogic(logic);
+	   myCoordinator.setLogic((Logic) logic);
 
 	   myCoordinator.showWindowMain();
 	}
