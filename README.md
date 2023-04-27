@@ -1,6 +1,8 @@
 # Convertidor de monedas y grados
 Segundo desafío Oracle One - Alura
 
+Video YouTube: https://youtu.be/9ne00I_h61g
+
 ## Description
 ¡Bienvenido al primer desafío del Challenge Java!
 
@@ -37,5 +39,5 @@ Fue creado usando JAVA JDK 11 y aplicando el modelo vista controlador.
 
 ![Screenshot from 2023-02-28 17-43-30](https://user-images.githubusercontent.com/28877424/221998935-daff9b3a-eca4-4887-9e63-39e02f4fbb52.png)
 
-
+Video YouTube: https://youtu.be/9ne00I_h61g
 
